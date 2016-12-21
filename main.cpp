@@ -1,4 +1,4 @@
-// CS 161 Assignment - Library Database (main.cpp)
+// CS 161 Assignment 7 - Library Database (main.cpp)
 // May 27, 2016
 // Author: Joseph Schell
 // Sources: None
@@ -72,7 +72,7 @@ int main()
 	return 0;
 }
 
-// Loads data of file name that was input by user
+// Loads data of file name that was input by user.
 int loadData(int & count, string pathname) {
 
 	ifstream inFile;
@@ -100,7 +100,7 @@ int loadData(int & count, string pathname) {
 	return 0;
 }
 
-// Converts a string to all lowercase
+// Converts a string to all lowercase.
 string toLower(string input) {
 	string output = "";
 	for (int i = 0; i < input.length(); i++) {
@@ -109,7 +109,7 @@ string toLower(string input) {
 	return output;
 }
 
-// Search function to find books by inputting Author's name
+// Search function to find books by inputting Author's name.
 int showBooksByAuthor(int count, string name) {
 	int records = 0;
 	sortByAuthor(count);  // Sort prior to searching
@@ -125,8 +125,7 @@ int showBooksByAuthor(int count, string name) {
 	return 0;
 }
 
-
-// Search function to find books by inputting the name of the book
+// Search function to find books by inputting the name of the book.
 int showBooksByTitle(int count, string title) {
 	int records = 0;
 	sortByTitle(count);  // Sort prior to searching
@@ -142,7 +141,7 @@ int showBooksByTitle(int count, string title) {
 	return 0;
 }
 
-// Shows all books in database
+// Shows all books in database.
 void showAll(int count) {
 	cout << "\n";
 	sortByTitle(count);
@@ -152,7 +151,7 @@ void showAll(int count) {
 	}
 }
 
-// Simple bubble sort, sorts author's names alphabetically 
+// Simple bubble sort, sorts author's names alphabetically.
 void sortByAuthor(int count) {
 	Book t;
 	for (int i = count - 1; i >= 0; i--) {
@@ -166,7 +165,7 @@ void sortByAuthor(int count) {
 	}
 }
 
-// Another bubble sort, sorts book names alphabetically  
+// Another bubble sort, sorts book titles alphabetically.  
 void sortByTitle(int count) {
 	Book t;
 	for (int i = count - 1; i >= 0; i--) {
